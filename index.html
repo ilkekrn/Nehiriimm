@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fıstık Tanesi</title>
+  <meta name="description" content="Kısa kişisel sayfa / proje linkleri">
+  <meta property="og:title" content="Fıstık Tanesi">
+  <meta property="og:description" content="Kısa kişisel sayfa / proje linkleri">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/preview.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="card">
+    <img class="avatar" src="assets/profile.svg" alt="Profil">
+    <h1>İlkeciğin</h1>
+    <p class="tagline">Nehir • Aşk • Özür Dilerim</p>
+
+    <div class="links">
+      <a class="btn" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="ilke26kiran@gmail.com">E‑posta</a>
+      <a class="btn outline" href="#projeler">Projelerim</a>
+    </div>
+
+    <section id="projeler" class="projects">
+      <h2>Projeler</h2>
+      <article class="project">
+        <h3>Nehirciğime Özür Sitem</h3>
+        <p>Her şey için senden özür dilerim sevgilim.</p>
+        <a class="mini" href="#" target="_blank" rel="noopener">Canlı Demo</a>
+      </article>
+      <article class="project">
+        <h3>Fıstık Tanesiii</h3>
+        <p>Seni Çok Seviyorum.</p>
+        <a class="mini" href="#" target="_blank" rel="noopener">Kaynak Kod</a>
+      </article>
+    </section>
+
+    <footer>
+      <p>© <span id="yil"></span> İlke Kıran — Tüm hakları saklıdır.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

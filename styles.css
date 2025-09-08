@@ -1,0 +1,100 @@
+/* Basit, modern, mobil odaklı stil */
+:root{
+  --fg:#111;
+  --muted:#555;
+  --card:rgba(255,255,255,.75);
+  --border:rgba(0,0,0,.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.12);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--fg);
+  line-height:1.6;
+}
+
+.bg{
+  position:fixed; inset:0;
+  background: radial-gradient(1200px 700px at 10% -10%, #b1b2ff55, transparent),
+              radial-gradient(800px 500px at 90% 10%, #ffd6e855, transparent),
+              linear-gradient(180deg,#fafafa, #f3f4f7);
+  z-index:-1;
+}
+
+.card{
+  max-width:720px;
+  margin: clamp(24px, 6vh, 48px) auto;
+  padding: clamp(20px, 5vw, 40px);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  backdrop-filter:saturate(120%) blur(8px);
+  box-shadow:var(--shadow);
+}
+
+.avatar{
+  width:108px; height:108px;
+  border-radius:50%;
+  display:block; margin:0 auto 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+
+h1{
+  font-size: clamp(26px, 6vw, 36px);
+  text-align:center; margin:8px 0 4px;
+}
+.tagline{
+  color:var(--muted);
+  text-align:center; margin:0 0 18px;
+}
+
+.links{
+  display:grid; gap:10px;
+  grid-template-columns:1fr 1fr;
+  margin: 8px 0 18px;
+}
+.btn{
+  text-decoration:none;
+  display:inline-block;
+  text-align:center;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#fff;
+  box-shadow:var(--shadow);
+  font-weight:600;
+}
+.btn:hover{ transform:translateY(-1px) }
+.btn:active{ transform:translateY(0) }
+.btn.outline{
+  background:transparent;
+  backdrop-filter: blur(4px);
+}
+
+.projects{ margin-top: 12px }
+.projects h2{ margin:10px 0 8px }
+.project{
+  padding:14px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  margin-bottom:10px;
+}
+.project h3{ margin: 0 0 6px }
+.project p{ margin: 0 0 8px; color:var(--muted) }
+a.mini{
+  display:inline-block; font-weight:600; text-decoration:none;
+  padding:8px 10px; border:1px solid var(--border);
+  border-radius:10px; background:#fafafa;
+}
+
+footer{ text-align:center; margin-top:16px; color:var(--muted) }
+
+@media (min-width:740px){
+  .links{ grid-template-columns:repeat(4,1fr) }
+}
